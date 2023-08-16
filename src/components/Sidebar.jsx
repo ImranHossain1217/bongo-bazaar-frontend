@@ -2,12 +2,19 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/bongo-logo.png";
 import { BsCart4, BsBagCheck } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Sidebar = () => {
+const Sidebar = ({ side, closeSidebar }) => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-64 bg-gray-800">
+    <div
+      className={`fixed top-0 ${side} sm:left-0 h-screen w-64 bg-gray-800 z-10 transition-all`}
+    >
+      <AiOutlineClose
+        onClick={closeSidebar}
+        className="absolute top-5 right-5 text-2xl sm:hidden block"
+      />
       <div className="bg-white p-3">
-        <img className="w-44" src={logo} alt="logo" />
+        <img className="w-40 sm:w-44" src={logo} alt="logo" />
       </div>
       <ul className="mt-5">
         <li className="p-4 text-white flex items-center cursor-pointer hover:bg-gray-600 transition-all">
