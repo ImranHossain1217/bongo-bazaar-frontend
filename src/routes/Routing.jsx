@@ -1,5 +1,5 @@
 import {BrowserRouter as Router , Routes,Route} from "react-router-dom"
-import AdminLogin from "../components/auth/AdminLogin";
+import AdminLogin from "../pages/auth/AdminLogin";
 
 const Routing = () => {
     return (
