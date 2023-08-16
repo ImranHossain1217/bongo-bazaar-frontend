@@ -1,10 +1,10 @@
-import './App.css'
+import Routing from './routes/Routing'
 
 function App() {
 
   return (
     <>
-      <h2 className='bg-black text-white p-5'>Hello world</h2>
+      <Routing/>
     </>
   )
 }
