@@ -6,7 +6,6 @@ import { setAdminToken } from "../../features/slices/authSlice";
 
 const AdminLogin = () => {
   const [userLogin, response] = useAuthLoginMutation();
-  console.log(response);
   const errors = response?.error?.data?.errors
     ? response?.error?.data?.errors
     : [];
