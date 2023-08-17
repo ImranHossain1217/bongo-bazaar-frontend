@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/bongo-logo.png";
-import { BsCart4, BsBagCheck } from "react-icons/bs";
+import { BsCart4, BsBagCheck, BsBarChartLine } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -42,6 +42,15 @@ const Sidebar = ({ side, closeSidebar }) => {
             to="/dashboard/products"
           >
             customers
+          </Link>
+        </li>
+        <li className="p-4 text-white flex items-center cursor-pointer hover:bg-gray-600 transition-all">
+          <BsBarChartLine className="mr-2 text-xl" />
+          <Link
+            className="capitalize text-lg font-serif"
+            to="/dashboard/categories"
+          >
+            categories
           </Link>
         </li>
       </ul>
